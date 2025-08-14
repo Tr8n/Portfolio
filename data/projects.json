@@ -1,0 +1,100 @@
+[
+  {
+    "slug": "keylogger-python",
+    "title": "Python Keylogger with RSA Encryption",
+    "summary": "Secure keylogger implementation with RSA encryption for educational purposes and ethical use cases like parental monitoring and employee activity tracking.",
+    "stack": ["Python", "RSA", "Cryptography", "Security"],
+    "year": 2025,
+    "tags": ["security", "python", "encryption"],
+    "thumbnail": "/images/projects/keylogger-python.png",
+    "links": {
+      "live": "https://github.com/Tr8n/Keylogger-python-",
+      "code": "https://github.com/Tr8n/Keylogger-python-"
+    },
+    "featured": true
+  },
+  {
+    "slug": "weather-app",
+    "title": "WeatherApp with ML Prediction",
+    "summary": "React-based weather application with machine learning models for weather prediction achieving 85% accuracy.",
+    "stack": ["React", "Python", "scikit-learn", "Jupyter"],
+    "year": 2025,
+    "tags": ["frontend", "machine-learning", "react"],
+    "thumbnail": "/images/projects/weather-app.png",
+    "links": {
+      "live": "https://github.com/Tr8n/WeatherApp",
+      "code": "https://github.com/Tr8n/WeatherApp"
+    },
+    "featured": true
+  },
+  {
+    "slug": "encoder-decoder",
+    "title": "Encoder-Decoder Tool",
+    "summary": "Web-based utility for encoding and decoding various data formats with a clean, responsive interface.",
+    "stack": ["JavaScript", "CSS", "HTML"],
+    "year": 2025,
+    "tags": ["frontend", "utility", "web-tools"],
+    "thumbnail": "/images/projects/encoder-decoder.png",
+    "links": {
+      "live": "https://github.com/Tr8n/Encoder-decoder-",
+      "code": "https://github.com/Tr8n/Encoder-decoder-"
+    },
+    "featured": false
+  },
+  {
+    "slug": "linkup",
+    "title": "LinkUp – Personal Link Manager",
+    "summary": "Full-stack SaaS app with AI summarization and Chrome extension integration.",
+    "stack": ["React", "Node.js", "MongoDB", "AI"],
+    "year": 2025,
+    "tags": ["fullstack", "AI"],
+    "thumbnail": "/images/projects/linkup.png",
+    "links": {
+      "live": "https://github.com/Tr8n/LinkUp",
+      "code": "https://github.com/Tr8n/LinkUp"
+    },
+    "featured": true
+  },
+  {
+    "slug": "sorting-visualizer",
+    "title": "Sorting Visualizer",
+    "summary": "Interactive visualization tool for sorting algorithms with adjustable speed and size.",
+    "stack": ["React", "JavaScript"],
+    "year": 2024,
+    "tags": ["frontend", "algorithms"],
+    "thumbnail": "/images/projects/sorting-visualizer.png",
+    "links": {
+      "live": "https://tr8n.github.io/Sorting-Visualizer/",
+      "code": "https://tr8n.github.io/Sorting-Visualizer/"
+    },
+    "featured": true
+  },
+  {
+    "slug": "weather-prediction",
+    "title": "Weather Prediction (ML)",
+    "summary": "Trained ML models to predict weather with 85% accuracy.",
+    "stack": ["Python", "scikit-learn"],
+    "year": 2024,
+    "tags": ["machine-learning"],
+    "thumbnail": "/images/projects/weather-prediction.png",
+    "links": {
+      "live": "https://tr8n.github.io/WeatherApp/",
+      "code": "https://tr8n.github.io/WeatherApp/"
+    },
+    "featured": false
+  },
+  {
+    "slug": "school-management-system",
+    "title": "School Management System (MERN)",
+    "summary": "Role-based ERP with admin dashboard and MongoDB integration.",
+    "stack": ["React", "Node.js", "MongoDB"],
+    "year": 2023,
+    "tags": ["fullstack", "ERP"],
+    "thumbnail": "/images/projects/school-management-system.png",
+    "links": {
+      "live": "https://github.com/Tr8n/School-ERP",
+      "code": "https://github.com/Tr8n/School-ERP"
+    },
+    "featured": false
+  }
+]

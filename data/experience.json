@@ -1,0 +1,47 @@
+[
+  {
+    "company": "Outliar",
+    "role": "AI Training Intern",
+    "start": "2024-09",
+    "end": "2024-11",
+    "duration": "2 months",
+    "location": "Remote",
+    "type": "Internship",
+    "bullets": [
+      "Developed and fine-tuned ML models using Python, TensorFlow, and scikit-learn on real datasets.",
+      "Improved model accuracy by 15% through feature engineering and hyperparameter tuning.",
+      "Implemented generative AI prototypes and deployed models with best practices."
+    ]
+  },
+  {
+    "company": "Vashali Traders",
+    "role": "Full-Stack Developer (Freelance)",
+    "start": "2024-06",
+    "end": "2024-08",
+    "duration": "3 months",
+    "location": "Remote",
+    "type": "Freelance",
+    "bullets": [
+      "Developed a comprehensive inventory management system using MERN stack (React, Node.js, MongoDB).",
+      "Implemented role-based access control and admin dashboard for business operations.",
+      "Integrated real-time inventory tracking and reporting features.",
+      "Deployed the application with proper security measures and database optimization."
+    ]
+  },
+  {
+    "company": "Microservices Project",
+    "role": "Backend Developer (Freelance)",
+    "start": "2024-03",
+    "end": "2024-05",
+    "duration": "3 months",
+    "location": "Remote",
+    "type": "Freelance",
+    "bullets": [
+      "Designed and implemented microservices architecture using Spring Boot and Java.",
+      "Managed multiple microservices with proper API gateway and service discovery.",
+      "Implemented database design and optimization for scalable applications.",
+      "Used Docker for containerization and deployment automation."
+    ]
+  }
+]
+

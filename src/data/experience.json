@@ -1,0 +1,14 @@
+[
+  {
+    "company": "Outliar",
+    "role": "AI Training Intern",
+    "start": "2024-09",
+    "end": "2025-03",
+    "location": "Remote",
+    "bullets": [
+      "Developed and fine-tuned ML models using Python, TensorFlow, and scikit-learn on real datasets.",
+      "Improved model accuracy by 15% through feature engineering and hyperparameter tuning.",
+      "Implemented generative AI prototypes and deployed models with best practices."
+    ]
+  }
+]

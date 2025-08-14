@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "linkup",
+    "title": "LinkUp – Personal Link Manager",
+    "summary": "Full-stack SaaS app with AI summarization and Chrome extension integration.",
+    "stack": ["React", "Node.js", "MongoDB", "AI"],
+    "year": 2025,
+    "tags": ["fullstack", "AI"],
+    "thumbnail": "/images/projects/linkup.png",
+    "links": {
+      "live": "https://github.com/Tr8n/LinkUp",
+      "code": "https://github.com/Tr8n/LinkUp"
+    },
+    "featured": true
+  },
+  {
+    "slug": "sorting-visualizer",
+    "title": "Sorting Visualizer",
+    "summary": "Interactive visualization tool for sorting algorithms with adjustable speed and size.",
+    "stack": ["React", "JavaScript"],
+    "year": 2024,
+    "tags": ["frontend", "algorithms"],
+    "thumbnail": "/images/projects/sorting-visualizer.png",
+    "links": {
+      "live": "https://tr8n.github.io/Sorting-Visualizer/",
+      "code": "https://tr8n.github.io/Sorting-Visualizer/"
+    },
+    "featured": true
+  },
+  {
+    "slug": "weather-prediction",
+    "title": "Weather Prediction (ML)",
+    "summary": "Trained ML models to predict weather with 85% accuracy.",
+    "stack": ["Python", "scikit-learn"],
+    "year": 2024,
+    "tags": ["machine-learning"],
+    "thumbnail": "/images/projects/weather-prediction.png",
+    "links": {
+      "live": "https://tr8n.github.io/WeatherApp/",
+      "code": "https://tr8n.github.io/WeatherApp/"
+    },
+    "featured": false
+  },
+  {
+    "slug": "school-management-system",
+    "title": "School Management System (MERN)",
+    "summary": "Role-based ERP with admin dashboard and MongoDB integration.",
+    "stack": ["React", "Node.js", "MongoDB"],
+    "year": 2023,
+    "tags": ["fullstack", "ERP"],
+    "thumbnail": "/images/projects/school-management-system.png",
+    "links": {
+      "live": "https://github.com/Tr8n/School-ERP",
+      "code": "https://github.com/Tr8n/School-ERP"
+    },
+    "featured": false
+  }
+]
