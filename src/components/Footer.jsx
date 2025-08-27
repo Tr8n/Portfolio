@@ -5,8 +5,8 @@ const Footer = () => {
   const links = {
     github: "https://github.com/Tr8n",
     linkedin: "https://linkedin.com/in/siddhant-shukla-6b4564275",
-    leetcode: "https://leetcode.com/your-leetcode-profile",
-    codeforces: "https://codeforces.com/profile/your-codeforces-handle"
+    leetcode: "https://leetcode.com/u/0nTr8n",
+    codeforces: "https://codeforces.com/profile/TanBlaze"
   };
   const [showScrollTop, setShowScrollTop] = useState(false);
 
