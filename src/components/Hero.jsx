@@ -17,7 +17,7 @@ const Hero = () => {
             
             <div className="hero-actions">
               <a href="#contact" className="btn btn-primary">Get In Touch</a>
-              <a href="/siddhant_shukla_resume.pdf" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              <a href="https://drive.google.com/file/d/1z4-T_RQCyndreOIiSDXv_6iYbrXClNDq/view?usp=drive_link" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                 Download Resume
               </a>
             </div>
