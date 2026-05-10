@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Inter:wght@400;500;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#003731",
+                    "surface-tint": "#c0c1ff",
+                    "on-surface-variant": "#c7c4d7",
+                    "on-tertiary-fixed-variant": "#703700",
+                    "on-error-container": "#ffdad6",
+                    "inverse-surface": "#dae2fd",
+                    "inverse-primary": "#494bd6",
+                    "tertiary": "#ffb783",
+                    "tertiary-fixed": "#ffdcc5",
+                    "surface-bright": "#31394d",
+                    "secondary-fixed-dim": "#4fdbc8",
+                    "surface-dim": "#0b1326",
+                    "surface-container-high": "#222a3d",
+                    "secondary": "#4fdbc8",
+                    "outline": "#908fa0",
+                    "on-surface": "#dae2fd",
+                    "on-primary-fixed": "#07006c",
+                    "on-tertiary": "#4f2500",
+                    "primary-container": "#8083ff",
+                    "primary-fixed-dim": "#c0c1ff",
+                    "primary-fixed": "#e1e0ff",
+                    "surface": "#0b1326",
+                    "on-primary-fixed-variant": "#2f2ebe",
+                    "on-primary-container": "#0d0096",
+                    "on-background": "#dae2fd",
+                    "surface-variant": "#2d3449",
+                    "inverse-on-surface": "#283044",
+                    "outline-variant": "#464554",
+                    "on-tertiary-fixed": "#301400",
+                    "on-error": "#690005",
+                    "error-container": "#93000a",
+                    "on-secondary-container": "#003f38",
+                    "secondary-container": "#04b4a2",
+                    "surface-container-low": "#131b2e",
+                    "on-secondary-fixed": "#00201c",
+                    "on-secondary-fixed-variant": "#005048",
+                    "on-tertiary-container": "#452000",
+                    "tertiary-fixed-dim": "#ffb783",
+                    "primary": "#c0c1ff",
+                    "error": "#ffb4ab",
+                    "surface-container-highest": "#2d3449",
+                    "surface-container-lowest": "#060e20",
+                    "background": "#0b1326",
+                    "tertiary-container": "#d97721",
+                    "on-primary": "#1000a9",
+                    "surface-container": "#171f33",
+                    "secondary-fixed": "#71f8e4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "container-max": "1280px",
+                    "gutter": "32px",
+                    "section-padding": "120px",
+                    "section-padding-mobile": "64px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Syne"],
+                    "label-sm": ["JetBrains Mono"],
+                    "headline-md": ["Syne"],
+                    "display-lg": ["Syne"],
+                    "headline-md-mobile": ["Syne"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["48px", {"lineHeight": "1.1", "fontWeight": "800"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "headline-md": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "display-lg": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-md-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(45, 52, 73, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(144, 143, 160, 0.2);
+        }
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        /* Since JS is prohibited, using CSS-only hover states for interactive components */
+        .card-hover:hover {
+            border-color: #c0c1ff;
+            transform: scale(1.02);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 shadow-sm transition-all duration-300 ease-in-out h-20">
+<div class="max-w-[1280px] mx-auto px-8 flex justify-between items-center h-full">
+<div class="font-display-lg text-headline-md font-extrabold text-on-surface">Portfolio</div>
+<nav class="hidden md:flex gap-10 items-center">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="#">Home</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="#">About</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="#">Work</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="#">Blog</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="#">Contact</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold hover:shadow-[0_0_15px_rgba(192,193,255,0.4)] transition-all duration-300">
+                Let's Talk
+            </button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="max-w-[1280px] mx-auto px-8 py-section-padding-mobile md:py-section-padding">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-4">The Narrative</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8 leading-none">Architecting <br/><span class="text-primary-fixed-dim">Digital Precision.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        I bridge the gap between creative vision and technical execution. With over a decade of experience, I've evolved from a curious tinkerer to a strategic design leader.
+                    </p>
+</div>
+<div class="md:col-span-5 relative">
+<div class="aspect-square glass-card rounded-xl overflow-hidden">
+<img alt="Professional Profile" class="w-full h-full object-cover grayscale contrast-125 opacity-80" data-alt="A high-contrast black and white professional portrait of a creative director in a dark studio setting. The lighting is dramatic, highlighting sharp facial features and textures. The overall aesthetic is minimalist and high-end, reflecting an authoritative yet understated digital-native persona consistent with a luxury dark-mode design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUrGLuB6A06_XICngrzSJIygSVLfkY7U1QlAYqsKe6YwRy-tEDbbsTnH2U1Oc0dRprtGVshsbYPijuMtH0Yi_LBOyeC2DFvwTLRdjUgMXTwp3n2nR39NuYSnPRR4RxZ4kgMc_1kNUOSADep84eVdf5_xlK6Nxg17Mm8t8G4FAStWOLq66a-u6W74GnS76DoaYy_AOwaI6MU5LDZm-LjxJeQINPFH9HpJdJt3hmW5l-_x_TQXyBF9_Y4hLof6vb6tqgMev2baQepFdU"/>
+</div>
+<div class="absolute -bottom-6 -left-6 glass-card p-6 rounded-lg hidden md:block">
+<div class="font-display-lg text-headline-md text-primary">12+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">YEARS OF<br/>EXPERIENCE</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Narrative Timeline -->
+<section class="max-w-[1280px] mx-auto px-8 py-section-padding-mobile md:py-section-padding bg-surface-container-lowest">
+<div class="mb-16">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-4">Journey</span>
+<h2 class="font-display-lg text-headline-md-mobile md:text-headline-md text-on-surface">The Professional Orbit</h2>
+</div>
+<div class="relative space-y-12">
+<!-- Timeline Line -->
+<div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-outline-variant/30 -translate-x-1/2 hidden md:block"></div>
+<!-- Milestone 1 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 relative">
+<div class="md:col-span-5 md:text-right flex flex-col justify-center">
+<div class="font-label-sm text-label-sm text-primary mb-2">2012 — 2015</div>
+<h3 class="font-headline-md text-headline-md-mobile text-on-surface">Genesis</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Started as a junior web developer, mastering the foundations of the browser and exploring the intersection of code and visual art.</p>
+</div>
+<div class="hidden md:flex md:col-span-2 justify-center items-center">
+<div class="w-4 h-4 rounded-full bg-primary ring-8 ring-primary-container/20"></div>
+</div>
+<div class="md:col-span-5"></div>
+</div>
+<!-- Milestone 2 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 relative">
+<div class="md:col-span-5 order-2 md:order-1"></div>
+<div class="hidden md:flex md:col-span-2 justify-center items-center order-2">
+<div class="w-4 h-4 rounded-full bg-secondary ring-8 ring-secondary-container/20"></div>
+</div>
+<div class="md:col-span-5 order-1 md:order-3">
+<div class="font-label-sm text-label-sm text-secondary mb-2">2016 — 2019</div>
+<h3 class="font-headline-md text-headline-md-mobile text-on-surface">The Refinement</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Transitioned into Product Design for high-growth tech startups. Learned the art of scalable design systems and user-centric psychology.</p>
+</div>
+</div>
+<!-- Milestone 3 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 relative">
+<div class="md:col-span-5 md:text-right flex flex-col justify-center">
+<div class="font-label-sm text-label-sm text-tertiary mb-2">2020 — PRESENT</div>
+<h3 class="font-headline-md text-headline-md-mobile text-on-surface">Strategic Mastery</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Leading cross-functional teams to build enterprise-grade digital experiences that define industries and set new visual standards.</p>
+</div>
+<div class="hidden md:flex md:col-span-2 justify-center items-center">
+<div class="w-4 h-4 rounded-full bg-tertiary ring-8 ring-tertiary-container/20"></div>
+</div>
+<div class="md:col-span-5"></div>
+</div>
+</div>
+</section>
+<!-- Core Values Section -->
+<section class="max-w-[1280px] mx-auto px-8 py-section-padding-mobile md:py-section-padding">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<div class="lg:col-span-4 sticky top-32">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-4">Principles</span>
+<h2 class="font-display-lg text-headline-md text-on-surface mb-6">Built on Foundation</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">My work is guided by a rigid set of internal values that ensure every pixel serves a purpose.</p>
+</div>
+<div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Value 1 -->
+<div class="glass-card p-8 card-hover group">
+<div class="mb-6 text-primary">
+<span class="material-symbols-outlined text-[48px]" data-icon="architecture">architecture</span>
+</div>
+<h4 class="font-headline-md text-headline-md-mobile text-on-surface mb-4">Technical Purity</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">I believe in clean code as a form of craftsmanship. Performance is not a feature; it's the foundation of a good experience.</p>
+</div>
+<!-- Value 2 -->
+<div class="glass-card p-8 card-hover group">
+<div class="mb-6 text-secondary">
+<span class="material-symbols-outlined text-[48px]" data-icon="visibility">visibility</span>
+</div>
+<h4 class="font-headline-md text-headline-md-mobile text-on-surface mb-4">Radical Clarity</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Complexity is the enemy of innovation. I strip away the noise to let the core narrative of a product shine through.</p>
+</div>
+<!-- Value 3 -->
+<div class="glass-card p-8 card-hover group">
+<div class="mb-6 text-tertiary">
+<span class="material-symbols-outlined text-[48px]" data-icon="dynamic_form">dynamic_form</span>
+</div>
+<h4 class="font-headline-md text-headline-md-mobile text-on-surface mb-4">Fluid Adaptation</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">The digital landscape is a river. I build systems that are resilient to change and adapt across every conceivable screen.</p>
+</div>
+<!-- Value 4 -->
+<div class="glass-card p-8 card-hover group">
+<div class="mb-6 text-surface-tint">
+<span class="material-symbols-outlined text-[48px]" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h4 class="font-headline-md text-headline-md-mobile text-on-surface mb-4">Invisible Details</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">True luxury is found in the things you don't notice—the subtle transition, the perfect spacing, the intuitive flow.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Proof of Growth Area -->
+<section class="max-w-[1280px] mx-auto px-8 py-section-padding-mobile md:py-section-padding bg-surface-container">
+<div class="text-center mb-16">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-4">Proof of Growth</span>
+<h2 class="font-display-lg text-headline-md-mobile md:text-headline-md text-on-surface">Measurable Evolution</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-12 text-center glass-card border-none bg-surface-container-highest">
+<div class="font-display-lg text-display-lg-mobile text-primary mb-2">140%</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mb-4 uppercase">Efficiency Gain</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Average increase in development velocity after implementing my design systems.</p>
+</div>
+<div class="p-12 text-center glass-card border-none bg-surface-container-highest">
+<div class="font-display-lg text-display-lg-mobile text-secondary mb-2">85+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mb-4 uppercase">Projects Shipped</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Global products launched across FinTech, Health, and Creative sectors.</p>
+</div>
+<div class="p-12 text-center glass-card border-none bg-surface-container-highest">
+<div class="font-display-lg text-display-lg-mobile text-tertiary mb-2">02</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mb-4 uppercase">Design Awards</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Recognized for excellence in technical execution and visual storytelling.</p>
+</div>
+</div>
+<!-- Bento Stats Display -->
+<div class="mt-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="md:col-span-2 glass-card p-8 flex items-center gap-6">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="terminal">terminal</span>
+</div>
+<div>
+<h5 class="font-headline-md text-body-lg text-on-surface">Modern Stack</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant">React, Next.js, Tailwind, Rust</p>
+</div>
+</div>
+<div class="md:col-span-2 glass-card p-8 flex items-center gap-6">
+<div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl" data-icon="frame_inspect">frame_inspect</span>
+</div>
+<div>
+<h5 class="font-headline-md text-body-lg text-on-surface">Architecture</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Design Systems, Component Libraries</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-[1280px] mx-auto px-8 py-section-padding-mobile md:py-section-padding">
+<div class="glass-card p-12 md:p-24 text-center rounded-xl overflow-hidden relative">
+<!-- Background decoration -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl -ml-32 -mb-32"></div>
+<h2 class="font-display-lg text-headline-md-mobile md:text-headline-md mb-8 relative z-10">Ready to build something <br/>extraordinary?</h2>
+<div class="flex flex-col md:flex-row justify-center gap-6 relative z-10">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-bold text-lg hover:shadow-[0_0_20px_rgba(192,193,255,0.4)] transition-all">Download Resume</button>
+<button class="border border-outline-variant text-on-surface px-10 py-4 rounded-full font-bold text-lg hover:bg-surface-variant transition-all">View My Work</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding-mobile md:py-section-padding bg-surface border-t border-outline-variant/20">
+<div class="max-w-[1280px] mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="font-display-lg text-headline-md-mobile text-on-surface">Portfolio</div>
+<div class="flex gap-8">
+<a class="text-on-surface-variant font-medium hover:text-secondary-fixed transition-colors duration-200 font-label-sm text-label-sm uppercase" href="#">LinkedIn</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary-fixed transition-colors duration-200 font-label-sm text-label-sm uppercase" href="#">GitHub</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary-fixed transition-colors duration-200 font-label-sm text-label-sm uppercase" href="#">Dribbble</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary-fixed transition-colors duration-200 font-label-sm text-label-sm uppercase" href="#">Twitter</a>
+</div>
+<div class="font-body-md text-body-md font-label-sm text-label-sm text-on-surface-variant">© 2024 Portfolio. Built with precision.</div>
+</div>
+</footer>
+</body></html>
