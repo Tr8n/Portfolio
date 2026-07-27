@@ -69,6 +69,16 @@ export const portfolioData: PortfolioData = {
         'Refined schema validation rules and query parameters to ensure robust data reliability across active api points.',
       ],
     },
+    {
+      role: 'AI Training Intern',
+      company: 'Outliar',
+      period: 'Sep 2024 - Mar 2025',
+      location: 'Remote',
+      highlights: [
+        'Worked on data pipelines and model evaluation for AI systems, improving model accuracy by 15%.',
+        'Automated preprocessing workflows to reduce operational overhead by 20%.',
+      ],
+    },
   ],
   skills: [
     'Node.js & Express.js',
