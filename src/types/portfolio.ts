@@ -32,6 +32,13 @@ export type ProfileItem = {
   url: string
 }
 
+export type ArchiveProjectItem = {
+  title: string
+  tech: string[]
+  description: string
+  githubUrl?: string
+}
+
 export type PortfolioData = {
   name: string
   role: string
@@ -60,6 +67,7 @@ export type PortfolioData = {
   techStack: Record<string, string[]>
   specialization: string[]
   projects: ProjectItem[]
+  archiveProjects: ArchiveProjectItem[]
   codingProfiles: ProfileItem[]
   achievements: string[]
   certifications: string[]

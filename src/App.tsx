@@ -1,18 +1,60 @@
+import { useState, lazy, Suspense } from 'react'
 import { Navbar } from './components/layout/Navbar'
-import { PortfolioSections } from './components/sections/PortfolioSections'
+import { Footer } from './components/layout/Footer'
+import { Hero } from './components/sections/Hero'
+import { About } from './components/sections/About'
+import { Experience } from './components/sections/Experience'
+import { Timeline } from './components/sections/Timeline'
+import { Skills } from './components/sections/Skills'
+import { Projects } from './components/sections/Projects'
+import { GithubStats } from './components/sections/GithubStats'
+import { Profiles } from './components/sections/Profiles'
+import { Contact } from './components/sections/Contact'
 import { navItems, portfolioData } from './data/portfolio'
 
+// Lazy load the resume modal for performance optimization
+const ResumeModal = lazy(() =>
+  import('./components/ui/ResumeModal').then((module) => ({
+    default: module.ResumeModal,
+  }))
+)
+
 function App() {
+  const [isResumeOpen, setIsResumeOpen] = useState(false)
+
   return (
-    <div className="min-h-screen bg-[#0f0f0f] text-[#f2f2f2]">
-      <Navbar items={navItems} name="Siddhant" email={portfolioData.contact.email} />
-      <PortfolioSections data={portfolioData} />
-      <footer className="border-t border-[#242424] py-8">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-4 text-sm text-[#888] sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-          <p>© {new Date().getFullYear()} Siddhant Shukla</p>
-          <p>Built with React, Tailwind, Framer Motion.</p>
-        </div>
-      </footer>
+    <div className="min-h-screen bg-[#000000] text-[#FFFFFF] antialiased selection:bg-neutral-800 selection:text-white">
+      {/* Navigation menu */}
+      <Navbar
+        items={navItems}
+        name={portfolioData.name}
+        onOpenResume={() => setIsResumeOpen(true)}
+      />
+
+      {/* Main sections */}
+      <main className="relative z-10">
+        <Hero data={portfolioData} onOpenResume={() => setIsResumeOpen(true)} />
+        <About data={portfolioData} />
+        <Experience data={portfolioData} />
+        <Timeline />
+        <Projects data={portfolioData} />
+        <Skills data={portfolioData} />
+        <GithubStats />
+        <Profiles data={portfolioData} />
+        <Contact data={portfolioData} onOpenResume={() => setIsResumeOpen(true)} />
+      </main>
+
+      {/* Footer layout */}
+      <Footer data={portfolioData} />
+
+      {/* Recruiter resume overlay modal */}
+      <Suspense fallback={null}>
+        <ResumeModal
+          isOpen={isResumeOpen}
+          onClose={() => setIsResumeOpen(false)}
+          data={portfolioData}
+        />
+      </Suspense>
     </div>
   )
 }

@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
 :root {
-  color: #f2f2f2;
-  background-color: #0f0f0f;
-  font-family: Geist, Inter, system-ui, sans-serif;
+  color: #FFFFFF;
+  background-color: #000000;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -14,115 +14,169 @@
 
 body {
   margin: 0;
-  background: #0f0f0f;
+  background-color: #000000;
+  color: #FFFFFF;
+  overflow-x: hidden;
 }
 
-.font-syne {
-  font-family: Geist, Inter, system-ui, sans-serif;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #1F1F1F;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2D2D2D;
 }
 
+/* Custom Typography & Utility Classes */
 .font-mono {
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
 }
 
-.panel {
-  border-radius: 0.85rem;
-  border: 1px solid #262626;
-  background: #141414;
+/* Glow Card Design System */
+.glow-card {
+  background-color: #0A0A0A;
+  border: 1px solid #1F1F1F;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
 }
 
+.glow-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 12px 30px -10px rgba(59, 130, 246, 0.14), 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+/* Interactive accent glow */
+.accent-glow {
+  box-shadow: 0 0 45px rgba(59, 130, 246, 0.12);
+}
+
+/* Buttons */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 9999px;
-  border: 1px solid #505050;
-  background: #1e1e1e;
-  padding: 0.62rem 1.1rem;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #f3f3f3;
-  transition: transform 180ms ease, background-color 180ms ease;
+  background-color: #FFFFFF;
+  color: #000000;
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 1px solid #FFFFFF;
 }
 
 .btn-primary:hover {
-  transform: translateY(-1px);
-  background: #2a2a2a;
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
-.btn-ghost {
+.btn-secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid #1F1F1F;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  border-color: #FFFFFF;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Glassmorphism Navigation Floating Bar */
+.glass-nav {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(31, 31, 31, 0.7);
   border-radius: 9999px;
-  border: 1px solid #3b3b3b;
-  background: transparent;
-  padding: 0.62rem 1.1rem;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #cdcdcd;
-  transition: border-color 180ms ease, color 180ms ease;
 }
 
-.btn-ghost:hover {
-  border-color: #5c5c5c;
-  color: #fafafa;
+/* Grid overlay background */
+.grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(31, 31, 31, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(31, 31, 31, 0.3) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
-.chip {
-  border-radius: 9999px;
-  border: 1px solid #313131;
-  background: #171717;
-  padding: 0.38rem 0.75rem;
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #b8b8b8;
-}
-
-.case-block {
-  border-radius: 0.65rem;
-  border: 1px solid #2b2b2b;
-  background: #101010;
-  padding: 0.85rem;
-}
-
-.case-label {
-  margin: 0;
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #8e8e8e;
-}
-
-.case-text {
-  margin-top: 0.45rem;
-  font-size: 0.86rem;
-  line-height: 1.45;
-  color: #bcbcbc;
-}
-
-.nav-link {
-  position: relative;
-}
-
-.nav-link::after {
-  content: '';
+/* Timeline Custom Styles */
+.timeline-line {
   position: absolute;
-  left: 0;
-  bottom: -0.35rem;
-  height: 1px;
-  width: 0;
-  background: #f0f0f0;
-  transition: width 180ms ease;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #1F1F1F, #FFFFFF, #1F1F1F);
 }
 
-.nav-link:hover::after {
-  width: 100%;
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 20px;
+    transform: none;
+  }
+}
+
+/* Printing styles for PDF Resume */
+@media print {
+  body {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+    font-family: Arial, sans-serif !important;
+  }
+  
+  header, footer, nav, button, .btn-primary, .btn-secondary, #contact, #navbar, #github {
+    display: none !important;
+  }
+  
+  .print-page {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 20px !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+    color: #000000 !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #000000 !important;
+    page-break-after: avoid;
+  }
+  
+  p, li, span, a {
+    color: #333333 !important;
+  }
+  
+  a {
+    text-decoration: underline !important;
+  }
+
+  .glow-card, .panel, .case-block {
+    background: transparent !important;
+    border: 1px solid #CCCCCC !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: #000000 !important;
+  }
 }
